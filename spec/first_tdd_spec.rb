@@ -70,7 +70,9 @@ describe TowersOfHanoi do
             expect(game.valid_move?(1,2)).to be false
         end
 
-        it "should return false if either peg is not on the board"
+        it "should return false if either peg is not on the board" do
+            expect(game.valid_move?(1,4)).to be false 
+        end 
 
         it "should return false if start peg is empty"
 

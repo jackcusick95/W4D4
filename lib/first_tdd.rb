@@ -64,10 +64,10 @@ class TowersOfHanoi
         s = start_peg - 1
         e = end_peg - 1
 
-        moves_peg = self.move(start_peg, end_peg)
-        moves_peg[e]
-        
+        return false unless [s,e].all? { |x| x.between?(0, 2)}
+        valid_move = @pegs[e].empty? || (@pegs[s][-1] < @pegs[e][-1]) 
 
+        valid_move
     end
 
 
