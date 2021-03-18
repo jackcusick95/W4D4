@@ -10,10 +10,19 @@ end
 
 describe "#two_sum" do 
 
-    it "should find all pairs of positions where elements at those positions sum to zero" do 
-    end 
+    it "should find all pairs of positions where elements at those positions sum to zero" do
+        expect([-1,0,2,-2,1].two_sum).to eq([[0,4],[2,3]])
+    end
 
-    context ""
+    it "should return indices sorted dictionary-wise" do
+        expect([-1,0,2,-2,1].two_sum).to eq([[0,4],[2,3]])
+    end
 
-end 
+end
+
+describe "#my_transpose" do
+    subject(:matrix) { Array.new }
+
+
+end
 
