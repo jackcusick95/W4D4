@@ -52,6 +52,23 @@ class TowersOfHanoi
         @pegs = [(1..num).to_a.reverse, [], [] ]
     end
 
-    def 
+    def move(start_peg, end_peg)
+        s = start_peg - 1
+        e = end_peg - 1
+
+        @pegs[e] << @pegs[s].pop
+
+    end
+
+    def valid_move?(start_peg, end_peg)
+        s = start_peg - 1
+        e = end_peg - 1
+
+        moves_peg = self.move(start_peg, end_peg)
+        moves_peg[e]
+        
+
+    end
+
 
 end

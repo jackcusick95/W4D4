@@ -63,5 +63,20 @@ describe TowersOfHanoi do
 
     end
 
+    describe "#valid_move?" do
+
+        it "should return false if the top value on end peg is smaller than start peg" do
+            game.move(1, 2)
+            expect(game.valid_move?(1,2)).to be false
+        end
+
+        it "should return false if either peg is not on the board"
+
+        it "should return false if start peg is empty"
+
+        it "should return true if it is a valid move"
+
+    end
+
 
 end
