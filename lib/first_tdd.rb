@@ -23,10 +23,22 @@ class Array
         #     end
         # end
 
-        # combination => pairs
+        # combination(2) => pairs
         # find the pairs that == 0
         # convert them into indices using .map { index(el) }
 
     end
 
+    def my_transpose
+        self[0].zip(*self[1..-1])
+    end 
+
 end
+
+def stock_picker(stocks)
+    day_pairs = stocks.combination(2)
+    max_profit = day_pairs.max { |a, b| (a[1] - a[0]) <=> (b[1] - b[0]) }
+    day_1 = stocks.index(max_profit[0])
+    day_2 = stocks.index(max_profit[1])
+    [day_1, day_2]
+end 

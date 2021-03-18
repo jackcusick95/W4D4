@@ -21,8 +21,20 @@ describe "#two_sum" do
 end
 
 describe "#my_transpose" do
-    subject(:matrix) { Array.new }
+    subject(:matrix) { [[0, 1, 2],[3, 4, 5],[6, 7, 8]] }
 
+    it "should return an n by n matrix with columns as the new rows" do
+        expect(matrix.my_transpose).to eq(matrix.transpose)
+    end 
 
 end
+
+describe "stock_picker" do
+    subject(:stocks) { [12, 15, 13, 22, 9, 18, 19, 20] }
+
+    it "should return the most profitable pair of days to buy and then sell the stock" do
+        expect(stock_picker(stocks)).to eq([4,7]) 
+    end 
+
+end 
 
