@@ -38,3 +38,33 @@ describe "stock_picker" do
 
 end 
 
+describe TowersOfHanoi do
+    subject(:game) { TowersOfHanoi.new(array1) }
+    let(:array1) { (1..6).to_a.reverse }
+    # let(:array2) { Array.new }
+    # let(:array3) { Array.new }
+
+    describe "#initialize" do
+
+        it "should have a starting array of six pieces" do
+            expect(game.array1).to eq((1..6).to_a.reverse)
+        end
+
+        it "should have a 2nd array which is empty" do
+            expect(game.array2).to eq([])
+        end
+
+        it "should have a 3rd array which is empty" do
+            expect(game.array3).to eq([])
+        end
+
+    end
+
+    describe "#move" do
+
+        it "should move the top value off a peg and into another array"
+
+    end
+
+
+end

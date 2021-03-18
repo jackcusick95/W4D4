@@ -42,3 +42,16 @@ def stock_picker(stocks)
     day_2 = stocks.index(max_profit[1])
     [day_1, day_2]
 end 
+
+
+class TowersOfHanoi
+
+    attr_reader :array1, :array2, :array3
+
+    def initialize(array1)
+        @array1 = array1
+        @array2 = []
+        @array3 = []
+    end
+
+end
