@@ -46,10 +46,11 @@ end
 
 class TowersOfHanoi
 
-    attr_reader :pegs
+    attr_accessor :pegs
 
     def initialize(num)
         @pegs = [(1..num).to_a.reverse, [], [] ]
+        @initial_pegs = [(1..num).to_a.reverse, [], [] ]
     end
 
     def move(start_peg, end_peg)
@@ -65,9 +66,15 @@ class TowersOfHanoi
         e = end_peg - 1
 
         return false unless [s,e].all? { |x| x.between?(0, 2)}
-        valid_move = @pegs[e].empty? || (@pegs[s][-1] < @pegs[e][-1]) 
+        return false if @pegs[s].empty?
+
+        valid_move = @pegs[e].empty? || (@pegs[s][-1] < @pegs[e][-1])
 
         valid_move
+    end
+
+    def won?
+        self.pegs == @initial_pegs.reverse
     end
 
 

@@ -74,9 +74,28 @@ describe TowersOfHanoi do
             expect(game.valid_move?(1,4)).to be false 
         end 
 
-        it "should return false if start peg is empty"
+        it "should return false if start peg is empty" do
+            expect(game.valid_move?(2,1)).to be false
+        end
 
-        it "should return true if it is a valid move"
+        it "should return true if it is a valid move" do
+            expect(game.valid_move?(1,2)).to be true
+        end
+
+    end
+
+    describe "#won?" do
+
+        it "should return true if the last peg is equal to the starting peg of the game" do
+            game.pegs = [(1..6).to_a.reverse, [], []].reverse
+            expect(game.won?).to be true
+        end
+
+    end
+
+    describe "#play" do
+
+        
 
     end
 
