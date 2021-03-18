@@ -46,12 +46,12 @@ end
 
 class TowersOfHanoi
 
-    attr_reader :array1, :array2, :array3
+    attr_reader :pegs
 
-    def initialize(array1)
-        @array1 = array1
-        @array2 = []
-        @array3 = []
+    def initialize(num)
+        @pegs = [(1..num).to_a.reverse, [], [] ]
     end
+
+    def 
 
 end
